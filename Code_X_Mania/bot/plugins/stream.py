@@ -83,7 +83,7 @@ async def private_receive_handler(c: Client, m: Message):
         
 
         msg_text ="""
-<b>🔗 LINK GENERATED</b>
+<b><u>🔗 LINK GENERATED</u></b>
 
 <b>🔤 Name:</b> <u>{}</u>
 
@@ -183,7 +183,7 @@ async def private_receive_handler(c: Client, m: Message):
         
 
         msg_text ="""
-<b>🔗 LINK GENERATED</b>
+<b><u>🔗 LINK GENERATED</u></b>
 
 <b>🔤 Name:</b> <u>{}</u>
 
