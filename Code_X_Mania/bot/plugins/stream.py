@@ -87,7 +87,9 @@ async def private_receive_handler(c: Client, m: Message):
 
 <b>🔤 Name:</b> <u>{}</u>
 <b>💯 Size:</b> <b>{}</b>
-<b>📥 Download URL: </b> <code>{}</code>"""
+<b>📥 Download URL: </b> <code>{}</code>
+
+<u>Send this file as a video to get online play button.</u>"""
 
         await log_msg.reply_text(text=f"**Requested by :** [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n**user id :** `{m.from_user.id}`\n**Stream ʟɪɴᴋ :** {stream_link}", disable_web_page_preview=True, parse_mode="Markdown", quote=True)
         await m.reply_text(
@@ -96,7 +98,7 @@ async def private_receive_handler(c: Client, m: Message):
             quote=True,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-                                                InlineKeyboardButton('Dᴏᴡɴʟᴏᴀᴅ 📥', url=online_link)
+                                                InlineKeyboardButton('📥 DOWNLOAD NOW', url=online_link)
                                                ]]) #Download Link
         )
     except FloodWait as e:
@@ -192,7 +194,7 @@ async def private_receive_handler(c: Client, m: Message):
             quote=True,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📺 PLAY ONLINE", url=stream_link), #Stream Link
-                                                InlineKeyboardButton('📥 DOWNLOAD', url=online_link)]]) #Download Link
+                                                InlineKeyboardButton('📥 DOWNLOAD NOW', url=online_link)]]) #Download Link
         )
     except FloodWait as e:
         print(f"Sleeping for {str(e.x)}s")
@@ -223,7 +225,7 @@ async def channel_receive_handler(bot, broadcast):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [InlineKeyboardButton("📺 PLAY ONLINE ", url=stream_link),
-                     InlineKeyboardButton('📥 DOWNLOAD', url=online_link)] 
+                     InlineKeyboardButton('📥 DOWNLOAD NOW', url=online_link)] 
                 ]
             )
         )
@@ -257,7 +259,7 @@ async def channel_receive_handler(bot, broadcast):
             message_id=broadcast.message_id,
             reply_markup=InlineKeyboardMarkup(
                 [
-                     InlineKeyboardButton('DOWNLOAD 📥', url=online_link)
+                     InlineKeyboardButton('📥 DOWNLOAD NOW', url=online_link)
                 ]
             )
         )
