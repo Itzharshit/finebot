@@ -86,7 +86,9 @@ async def private_receive_handler(c: Client, m: Message):
 <b>🔗 LINK GENERATED</b>
 
 <b>🔤 Name:</b> <u>{}</u>
+
 <b>💯 Size:</b> <b>{}</b>
+
 <b>📥 Download URL: </b> <code>{}</code>
 
 <u>Send this file as a video to get online play button.</u>"""
@@ -181,10 +183,12 @@ async def private_receive_handler(c: Client, m: Message):
         
 
         msg_text ="""
-<<b>🔗 LINK GENERATED</b>
+<b>🔗 LINK GENERATED</b>
 
 <b>🔤 Name:</b> <u>{}</u>
+
 <b>💯 Size:</b> <b>{}</b>
+
 <b>📥 Download URL: </b> <code>{}</code>"""
 
         await log_msg.reply_text(text=f"**Requested By :** [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n**User id :** `{m.from_user.id}`\n**Stream  :** {stream_link}", disable_web_page_preview=True, parse_mode="Markdown", quote=True)
