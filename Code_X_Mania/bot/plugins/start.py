@@ -145,7 +145,9 @@ You can also add me to your movie or video channel to get stream and download bu
 <b>🔗 LINK GENERATED</b>
 
 <b>🔤 Name:</b> <u>{}</u>
+
 <b>💯 Size:</b> <b>{}</b>
+
 <b>📥 Download URL: </b> <code>{}</code>"""
 
         await m.reply_text(
